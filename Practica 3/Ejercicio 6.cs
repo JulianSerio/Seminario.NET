@@ -44,7 +44,7 @@ double[,] Multiplicacion(double[,] A, double[,] B){
         return m;
     }   
     else{
-        throw new ArgumentException("Las matrices no son iguales");
+        throw new ArgumentException();
     }
 
 }
