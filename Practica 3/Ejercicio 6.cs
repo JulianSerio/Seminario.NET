@@ -34,17 +34,20 @@ double[,]? Resta(double[,] A, double[,] B){
     }
 }
 double[,] Multiplicacion(double[,] A, double[,] B){
-    if (columnasA == filasB){
-        double [,]? m = new double[filasA,columnasA];
-        for (int i = 0; i < filasA; i++){
-            for (int j = 0; j < columnasA; j++){
-                m[i,j] = A[i,j] * B[i,j];
-            }
+    if (columnasA == filasB) {
+        double[,] resul = new double[A.GetLength(0),B.GetLength(1)];
+        for(int i=0; i<A.GetLength(0); i++){
+          for(int j=0;j<B.GetLength(1); j++){
+             resul[i,j]=0;
+             for(int x=0; x<A.GetLength(1);x++){
+                resul[i,j] += A[i,x] * B[x,j];
+             }
+          }
         }
-        return m;
-    }   
-    else{
-        throw new ArgumentException();
+       return resul;
+    else {
+        throw new ArgunmentException("EE");
     }
 
 }
+
