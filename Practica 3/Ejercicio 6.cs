@@ -6,7 +6,7 @@ int filasB = b.GetLength(0);
 int columnasB = b.GetLength(1);
 
 double[,]? Suma(double[,] A, double[,] B){
-    if (filasA + filasB) && (columnasB == columnaA){
+    if (filasA == filasB) && (columnasB == columnaA){
         double [,]? m = new double[filasA,columnasA];
         for (int i = 0; i < filasA; i++){
             for (int j = 0; j < columnasA; j++){
@@ -20,7 +20,7 @@ double[,]? Suma(double[,] A, double[,] B){
     }
 }
 double[,]? Resta(double[,] A, double[,] B){
-     if (filasA + filasB) && (columnasB == columnaA){
+     if (filasA == filasB) && (columnasB == columnaA){
         double [,]? m = new double[filasA,columnasA];
         for (int i = 0; i < filasA; i++){
             for (int j = 0; j < columnasA; j++){
