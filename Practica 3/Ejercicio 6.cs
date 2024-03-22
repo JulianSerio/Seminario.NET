@@ -5,10 +5,6 @@ int columnasA = a.GetLength(1);
 int filasB = b.GetLength(0);
 int columnasB = b.GetLength(1);
 
-if (filasA + columnasA != filasB + columnasB){
-    throw new ArgumentException("Las matrices no son iguales!");
-}
-
 double[,]? Suma(double[,] A, double[,] B){
     if (filasA + columnasA == filasB + columnasB){
         double [,]? m = new double[filasA,columnasA];
