@@ -16,7 +16,7 @@ public class ListaDePersonas{
     public Persona? this[int dni]{
         get{
             foreach (Persona p in lista){
-                if (p[2] == (object)dni){
+                if ((int)p[2] == dni){
                     return p;
                 }
             }
@@ -28,8 +28,8 @@ public class ListaDePersonas{
         get{
             List<string> nombres = new List<string>();
             foreach (Persona p in lista){
-                if (p[0].ToString().ElementAt(0).Equals(c)){
-                    nombres.Add((string)p[0]);
+                if (p[0].ToString().FirstOrDefault().Equals(c)){
+                    nombres.Add(p[0].ToString());
                  }
             }
             
@@ -38,4 +38,5 @@ public class ListaDePersonas{
         }
     }
 
+}
 }
