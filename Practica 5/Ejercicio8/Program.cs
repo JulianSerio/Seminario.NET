@@ -27,11 +27,14 @@ listaDePersonas.Agregar(p1);
 listaDePersonas.Agregar(p2);
 listaDePersonas.Agregar(p3);
 
-Persona? buscada = listaDePersonas[5000000];
-if (buscada != null)
+Persona? buscada = listaDePersonas[44045058];
+if (buscada != null){
     for (int i = 0; i < 5; i++){
         Console.WriteLine(buscada[i]);
     } 
+}
+else
+    Console.WriteLine("es null");
 
 Console.WriteLine("-----------------");
 
@@ -41,4 +44,5 @@ if (nombres != null){
         Console.WriteLine(st);
     } 
 }
+
 
