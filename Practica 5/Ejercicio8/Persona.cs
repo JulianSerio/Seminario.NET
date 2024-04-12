@@ -9,7 +9,7 @@ public class Persona{
 
 
 
-    public object this[int i]{
+    public object? this[int i]{
         get {
             switch (i){
                 case 0:
@@ -28,26 +28,29 @@ public class Persona{
             }
         }
         set {
-            switch (i){
-                case 0:
-                    Nombre = (string)value;
-                    break;
-                case 1:
-                    Sexo = (char)value;
-                    break;
-                case 2:
-                    Dni = (int)value;
-                    break;
-                case 3: 
-                    FechaNacimiento = (DateTime)value;
-                    break;
-                
-                default:
-                    Console.WriteLine("Valor incorrecto");
-                    break;
+            if (value != null) {
+                switch (i){
+                    case 0:
+                        Nombre = (string)value;
+                        break;
+                    case 1:
+                        Sexo = (char)value;
+                        break;
+                    case 2:
+                        Dni = (int)value;
+                        break;
+                    case 3: 
+                        FechaNacimiento = (DateTime)value;
+                        break;
+                    
+                    default:
+                        Console.WriteLine("Valor incorrecto");
+                        break;
+                }
             }
         }
     }
 
 
+}
 }
